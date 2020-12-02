@@ -13,7 +13,7 @@ class Pacman{
 
         let row_to = this.row
         let col_to = this.col
-
+        
         //////////проверка направление, чтобы пакмен не вышел за рамки карты
         switch (direction){
             case "ArrowDown": 
@@ -38,9 +38,8 @@ class Pacman{
                 break
         }
 
-
         /////////////////  движение, если по направлению нет стены и плюс монетка, в случае если по направлению она имеется
-        switch ( this.grid[row_to][col_to].__proto__.constructor.name){
+        switch ( this.grid[row_to][col_to].__proto__.constructor.name ){
 
             case "Wall":  
                 console.log("case Wall")  
@@ -68,7 +67,7 @@ class Pacman{
     render(rootElement){
         this.rootElement = rootElement
         let divParent = $('<div>', 'pacman')
-        divParent.style.transform = this.direction
+            divParent.style.transform = this.direction
         this.rootElement.appendChild(divParent)        
     }
 }

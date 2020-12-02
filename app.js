@@ -27,9 +27,9 @@ function newGame(){
     gm.render( $('.scene') )
 
     $('body').addEventListener('keydown', function(e){
-                                            pacman.move(e.key)
-                                            gm.render( $('.scene') )
-                                            console.table(gm.grid)
-                                            })
+                                pacman.move(e.key)
+                                gm.render( $('.scene') )
+
+                        })
 }
 
