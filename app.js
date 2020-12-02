@@ -12,7 +12,7 @@ function newGame(){
     let pacman = new Pacman(pacman_row, pacman_col, gm.grid, rows, cols)
 
     for (let ri=0; ri<gm.rows; ri++)
-        for (let ci=0; ci<gm.cols; ci++)
+        for (let ci=0; ci<gm.cols; ci++){
             if (ri == pacman_row && ci == pacman_col)  
                 gm.grid[ri][ci] = pacman
             else{
@@ -23,6 +23,7 @@ function newGame(){
                     case 2: gm.grid[ri][ci] = new Wall();  continue
                 }                              
             }        
+        }
 
     gm.render( $('.scene') )
 
