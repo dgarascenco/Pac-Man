@@ -53,12 +53,13 @@ function newGame(){
             gm.grid[ri][ci] = new Empty()   
     }  
 
-    let pacman_place = randomPlace(gm)    
- 
-    new Pacman(pacman_place[0], pacman_place[1], gm.grid)   
-    
     let place = randomPlace(gm)
+    new Heart(place[0], place[1], gm.grid)
+
+    place = randomPlace(gm)
+    new Pacman(place[0], place[1], gm.grid)   
     
+    place = randomPlace(gm)    
     for (let i=0; i< gm.coins; i++){
         place = randomPlace(gm)
         new Coin(place[0], place[1], gm.grid)
