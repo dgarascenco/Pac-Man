@@ -40,12 +40,12 @@ class Gamemap {
         let h  = document.createElement("H1")
 
         if (status == "lose"){
-            lose.src = "src/Gamemap/images/lose.png"
+            lose.src = "src/gamemap/images/lose.png"
             h.style.color = "red"
             h.innerText = "YOU LOSE!!!"  
             this.status = "lose"           
         } else if ( status == "victory" ){
-            lose.src = "src/Gamemap/images/victory.png"
+            lose.src = "src/gamemap/images/victory.png"
             h.style.color = "green"
             h.innerText = "CONGRATOLATIONS!!!"  
             this.status = "victory"          
