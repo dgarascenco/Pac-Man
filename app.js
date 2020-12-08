@@ -45,8 +45,8 @@ function newGame(){
 
     gm.rows = document.getElementById('rows').value
     gm.cols = document.getElementById('cols').value 
-    gm.coins = parseInt(gm.rows* gm.cols/10)
-    gm.bombs = gm.coins    
+    gm.coins = document.getElementById('coin').value
+    gm.bombs = document.getElementById('bomb').value    
     for (let ri=0; ri<gm.rows; ri++){
         gm.grid[ri] = []
         for (let ci=0; ci<gm.cols; ci++)            
