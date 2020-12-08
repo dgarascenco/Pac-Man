@@ -7,6 +7,5 @@ class Empty{
         this.rootElement = rootElement
         let divParent = $('<div>', 'empty')
         this.rootElement.appendChild(divParent)
-
     }
 }

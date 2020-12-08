@@ -10,28 +10,54 @@
     <link rel="stylesheet" href="src/coin/Coin.css">
     <link rel="stylesheet" href="src/wall/Wall.css">
     <link rel="stylesheet" href="src/empty/Empty.css">
-    <!-- <link rel="styleshett" href="src/pacman/Pacman.css"> -->
-    
+    <link rel="stylesheet" href="src/devil/Devil.css">
+    <link rel="stylesheet" href="src/bomb/Bomb.css">
+ 
 </head>
 <body>
+    <table>
+        <td>
+            <div style="display:inline-block;">
+                <label style="color:white; display:block;">Enter the size of map:</label>
+                <input  type="text" id="rows" placeholder="Enter size" style="width:110px;display:inline-block;" value="10"><label style="color:white">x</label>
+                <input  type="text" id="cols" placeholder="Enter count of cols" style="width:110px" value="10">
 
-    <input  type="text" id="rows" placeholder="Enter size" style="width:110px" value="10">
-    <input  type="text" id="cols" placeholder="Enter count of cols" style="width:110px" value="10">
-    <button id="btn_new_game">New Game</button>
-   
+            </div>
+            <br><br>
+            <label style="color:white; "><img src="src/coin/images/coin.png"> X </label>
+            <input  type="text" id="coin" style="width:20px" value="10">
+            <label style="color:white; "><img src="src/bomb/images/bomb.png"> X </label>
+            <input  type="text" id="bomb" style="width:20px" value="10">
+        </td>
+        <td>
+            <button id="btn_new_game" style="margin-left: 40px;">Set settings</button>  
+        </td>
+        <td >
+            <button id="btn_start_game" style="margin-left: 40px;" disabled>  Start Game</button>            
+            <br><br>
+            <button id="btn_load_game" style="margin-left: 40px;">Load Game</button> 
+            <br><br>
+            <button id="btn_save_game" style="margin-left: 40px;" disabled>Save Game</button>
+            <br>
+        </td>
+    </table>
     <hr>
 
-    <div class="scene">
+    <div class="scene" id="scene">
 
-    </div>    
+    </div> 
+
     <h3 id='coins' value="0" style="color:red;">0 Coins</h3>
 
     <script src="src/util.js"></script>
     <script src="src/gamemap/Gamemap.js"></script>
+    <script src="src/empty/Empty.js"></script>
     <script src="src/coin/Coin.js"></script>
     <script src="src/wall/Wall.js"></script>
-    <script src="src/pacman/Pacman.js"></script>
-    <script src="src/empty/Empty.js"></script>
+    <script src="src/pacman/Pacman.js"></script>    
+    <script src="src/devil/Devil.js"></script>
+    <script src="src/bomb/Bomb.js"></script>
+    
     <script src="app.js"></script>
 </body>
 </html>
